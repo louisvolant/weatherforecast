@@ -43,10 +43,12 @@ def get_city_location(api_key, city):
 def print_location(data):
     if data:
         firstresult = data[0]
+        
         print(f"Localization pour {firstresult['name']}, {firstresult['country']}:")
         print(f"Latitude: {firstresult['lat']}")
         print(f"Longitude: {firstresult['lon']}")
-        print(f"Région: {firstresult['state']}")
+        if('state' in firstresult):
+            print(f"Région: {firstresult['state']}")
     else:
         print("Erreur : impossible de récupérer les données de localization")
 
