@@ -1,5 +1,6 @@
+# weather.py
+
 import requests
-import json
 import logging
 import argparse
 from datetime import datetime
@@ -14,9 +15,10 @@ FORECAST_API_V2 = "http://api.openweathermap.org/data/2.5/forecast"
 # execute with
 # python3 -m venv myenv
 # source myenv/bin/activate
-# pip install argparse requests datetime
+# pip install requests
 # python3 weather.py 'paris' 
 # To verify if the API Key is activated : https://api.openweathermap.org/data/2.5/weather?q=paris&appid=GEOLOC_API
+# Once finished, simply desactivate the virtual environment using "deactivate"
 
 def get_city_location(api_key, city):
     base_url = GEOCODING_API
