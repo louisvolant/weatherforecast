@@ -9,8 +9,9 @@ Python3, logging, argparse, requests, datetime
 
 ````
 python3 -m venv myenv
-source myenv/bin/activate
-pip install argparse requests datetime
+source myenv/bin/activate // on MacOS
+source myenv/Scripts/activate // on Windows
+pip install requests
 ````
 
 2. Api Key

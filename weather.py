@@ -14,7 +14,8 @@ FORECAST_API_V2 = "http://api.openweathermap.org/data/2.5/forecast"
 # README
 # execute with
 # python3 -m venv myenv
-# source myenv/bin/activate
+# source myenv/bin/activate # on MacOS
+# source myenv/Scripts/activate # on Windows
 # pip install requests
 # python3 weather.py 'paris' 
 # To verify if the API Key is activated : https://api.openweathermap.org/data/2.5/weather?q=paris&appid=GEOLOC_API
