@@ -20,11 +20,10 @@ You also need to have a API key working from OpenWeatherMap.org
 
 To verify if the API Key is activated : https://api.openweathermap.org/data/2.5/weather?q=paris&appid=GEOLOC_API
 
-Once you have it, create a file config.py and put inside your API Key : 
-># config.py
->GEOLOC_API = "dddddddsdfsdfsdfsdfsdzerzer"
-
-
+Once you have it, put it into your env variables :
+````
+export OPEN_WEATHER_MAP_API='fsfsdfdsfdsfsdfdsfdsfsdfdsf'
+````
 
 ## How to execute
 

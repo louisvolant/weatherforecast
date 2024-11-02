@@ -1,10 +1,10 @@
 # weather.py
 
 import requests
+import os
 import logging
 import argparse
 from datetime import datetime
-from config import GEOLOC_API
 
 GEOCODING_API = "http://api.openweathermap.org/geo/1.0/direct"
 WEATHER_API_V3 = "https://api.openweathermap.org/data/3.0/onecall"
@@ -16,8 +16,8 @@ FORECAST_API_V2 = "http://api.openweathermap.org/data/2.5/forecast"
 # python3 -m venv myenv
 # source myenv/bin/activate # on MacOS
 # source myenv/Scripts/activate # on Windows
-# pip install requests
-# python3 weather.py 'paris' 
+# pip install -r requirements.txt
+# python3 weather.py 'paris'
 # To verify if the API Key is activated : https://api.openweathermap.org/data/2.5/weather?q=paris&appid=GEOLOC_API
 # Once finished, simply desactivate the virtual environment using "deactivate"
 
@@ -120,6 +120,7 @@ def main():
     parser.add_argument('city', type=str, help='The city you wish to request weather for')
     args = parser.parse_args()
 
+    GEOLOC_API = os.getenv('OPEN_WEATHER_MAP_API')
 
     logging.info('Calling Localization for: {0} with api key {1}'.format(args.city, GEOLOC_API))
     city_location = get_city_location(GEOLOC_API, args.city)
